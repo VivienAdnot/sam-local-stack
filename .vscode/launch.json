@@ -8,8 +8,7 @@
       "invokeTarget": {
         "target": "code",
         "lambdaHandler": "notes.handler",
-        "projectRoot": "${workspaceFolder}",
-        "templatePath": "sam-template.yaml"
+        "projectRoot": "${workspaceFolder}"
       },
       "lambda": {
         "runtime": "nodejs16.x",
