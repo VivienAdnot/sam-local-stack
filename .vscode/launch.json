@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "SimpleLambdaFunction",
+      "invokeTarget": {
+        "target": "code",
+        "lambdaHandler": "notes.handler",
+        "projectRoot": "${workspaceFolder}",
+        "templatePath": "sam-template.yaml"
+      },
+      "lambda": {
+        "runtime": "nodejs16.x",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    }
+  ]
+}
