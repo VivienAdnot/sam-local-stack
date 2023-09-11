@@ -1,7 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+
 Resources:
-  samlocalstack:
-    Type: AWS::Serverless::Function
+  samLocalStackFunction:
+    Type: 'AWS::Serverless::Function'
     Properties:
+      FunctionName: samLocalStackFunction
       Handler: notes.handler
-      CodeUri: /Users/vivienadnotair/unsync-documents/code/node/aws/sam-local-stack
       Runtime: nodejs16.x
+      Events:
+        GetAll:
+          Type: HttpApi
+          Properties:
+            Path: /notes
+            Method: GET
